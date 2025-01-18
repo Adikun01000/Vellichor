@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            margin: 0 0 1rem;
+        }
+        .mood-streak, .daily-tasks, .upcoming-events {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome back, [User Name]!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Here's your wellness overview for today:</h2>
+            <a href="stressAnalyzer.html">
+                <button class="link-button">Go to Stress Analyzer</button>
+            </a>
+
+            <a href="web3.html">
+                <button class="link-button">Go to Settings</button>
+            </a>
+
+            <a href="index.html">
+                <button class="link-button"> Mood Monitor</button>
+            </a>
+
+            <a href="DoctorRecommendation.html">
+                <button class="link-button"> DoctorRecommendation</button>
+            </a>
+
+            <!-- Mood Streak Section -->
+            <div class="mood-streak">
+                <h3>Mood Streak: 7 🟡</h3>
+                <p>Today's Mood: <span class="mood-emoji">😊</span></p>
+            </div>
+
+            <!-- Daily Tasks Section -->
+            <div class="daily-tasks">
+                <h3>Daily Tasks</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Morning Meditation</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Gratitude Journal</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task3">
+                        <label for="task3">Evening Reflection</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Breathing Exercise</label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Events Section -->
+            <div class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Group Meditation Session - Tomorrow, 7 PM</li>
+                    <li>Therapy Session - Thursday, 2 PM</li>
+                    <li>Support Group Meeting - Friday, 6 PM</li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>

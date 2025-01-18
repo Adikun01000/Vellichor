@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <style>
+        :root {
+            --background-light: #f9f9f9;
+            --text-light: #333;
+            --background-dark: #121212;
+            --text-dark: #f9f9f9;
+            --accent: #6200ea;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: var(--accent);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #3700b3;
+        }
+
+        .theme-toggle {
+            margin-top: 20px;
+        }
+
+        .dark-mode {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        <p>Manage your account and preferences here.</p>
+
+        <div class="section">
+            <h2>Account Settings</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" value="Navya">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" value="navya@example.com">
+
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password">
+
+            <label for="confirm-password">Confirm New Password</label>
+            <input type="password" id="confirm-password">
+
+            <button class="button">Update Account</button>
+        </div>
+
+        <div class="section">
+            <h2>Notification Preferences</h2>
+            <label><input type="checkbox"> Receive email notifications</label>
+            <label><input type="checkbox"> Receive push notifications</label>
+            <label><input type="checkbox"> Daily reminders</label>
+            <button class="button">Save Preferences</button>
+        </div>
+
+        <div class="section">
+            <h2>Theme Settings</h2>
+            <button class="button theme-toggle">Toggle Dark Theme</button>
+        </div>
+
+        <div class="section">
+            <h2>Privacy Settings</h2>
+            <label><input type="checkbox"> Make my profile public</label>
+            <label><input type="checkbox"> Share my progress with the community</label>
+            <button class="button">Update Privacy Settings</button>
+
+        </div>
+        <a href="home page.html">
+            <button class="link-button">Back to Home Page</button>
+        </a>
+    </div>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+
+            if (isDarkMode) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Apply theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>

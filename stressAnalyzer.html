@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Level Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #007BFF;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #0056b3;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: #f0f9ff;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .hero button {
+            padding: 10px 25px;
+            font-size: 16px;
+            color: #fff;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #0056b3;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background: #ffffff;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .feature p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .about-follow {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background: #f0f9ff;
+            gap: 20px;
+        }
+
+        .about, .follow {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h3, .follow h3 {
+            font-size: 24px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .about p, .follow p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .follow a {
+            margin: 0 10px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .follow a:hover {
+            color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vellichor</h1>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About Us</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Analyze Your Stress Levels Instantly</h2>
+    <p>Discover how stress affects you and get actionable insights to improve your mental health.</p>
+    <button onclick="alert('Starting Analysis...')">Get Started</button>
+</section>
+
+<section class="features" id="features">
+    <div class="feature">
+        <h3>Doctor Recommendations</h3>
+        <p>Reccomend Doctors Near you.</p>
+    </div>
+    <div class="feature">
+        <h3>Mood Monitor</h3>
+        <p>Allows you to see at what week how much stress you were in through a use of barChart.</p>
+    </div>
+    <div class="feature">
+        <h3>Progress Tracking</h3>
+        <p>Monitor your stress levels over time to see your improvement.</p>
+    </div>
+</section>
+
+<section class="about-follow">
+    <div class="about" id="about">
+        <h3>About Us</h3>
+        <p>We are dedicated to helping individuals understand and manage their stress levels effectively. Our tool combines cutting-edge technology and user-friendly design to deliver actionable insights for better mental health.</p>
+    </div>
+    <div class="follow">
+        <h3>Follow Us</h3>
+        <p>Stay connected and receive the latest updates:</p>
+        <p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Stress Analyzer. All rights reserved.</p>
+    <a href="home page.html">
+        <button class="link-button">Back to Home Page</button>
+    </a>
+</footer>
+
+</body>
+</html>

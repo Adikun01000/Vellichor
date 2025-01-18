@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="to_do_css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskButton">Add</button>
+        </div>
+        <div class="daily-progress">
+            <span id="dailyProgressText">Daily Progress</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+            <span id="progressText">0%</span>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="to_do_js.js"></script>
+</body>
+</html>

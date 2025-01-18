@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="webpage_css.css">
+    <script src="webpage_js.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stress Management Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to Your Stress Management Journey</h2>
+            <p>Discover effective strategies to manage stress and improve your well-being.</p>
+            <button onclick="showQuote()">Get Inspired</button>
+            <p id="quote" class="hidden"></p>
+        </section>
+
+        <section id="tips">
+            <h2>Stress Management Tips</h2>
+            <ul>
+                <li>Practice mindfulness and meditation.</li>
+                <li>Engage in regular physical activity.</li>
+                <li>Maintain a balanced diet.</li>
+                <li>Get enough sleep.</li>
+                <li>Connect with friends and family.</li>
+            </ul>
+        </section>
+
+        <section id="resources">
+            <h2>Helpful Resources</h2>
+            <ul>
+                <li><a href="https://www.mindful.org/">Mindful</a></li>
+                <li><a href="https://www.headspace.com/">Headspace</a></li>
+                <li><a href="https://www.calm.com/">Calm</a></li>
+                <li><a href="https://www.psychologytoday.com/us/basics/stress">Psychology Today</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Stress Management Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

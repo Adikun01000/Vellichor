@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 2rem;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Box Styling */
+        .section-box {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #6200ea;
+        }
+
+        /* Mood Streak Section */
+        .mood-streak {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mood-emoji {
+            font-size: 2rem;
+        }
+
+        .emoji-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+
+        .emoji-options span {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .emoji-options span:hover {
+            transform: scale(1.2);
+        }
+
+        /* Daily Tasks Section */
+        .daily-tasks ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .daily-tasks li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .daily-tasks input[type="checkbox"] {
+            margin-right: 1rem;
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Upcoming Events Section */
+        .upcoming-events ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .upcoming-events li {
+            background-color: #6200ea;
+            color: white;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome back, [User Name]!</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="section-box">
+            <h2>Here's your wellness overview for today:</h2>
+
+            <!-- Mood Streak Section -->
+            <div class="mood-streak">
+                <div>
+                    <h3>Mood Streak: <span id="streak">0</span></h3>
+                    <p>Today's Mood: <span class="mood-emoji" id="current-mood">😊</span></p>
+                </div>
+                <div class="emoji-options">
+                    <span onclick="selectMood('😊')" id="emoji1">😊</span>
+                    <span onclick="selectMood('😐')" id="emoji2">😐</span>
+                    <span onclick="selectMood('😢')" id="emoji3">😢</span>
+                    <span onclick="selectMood('😄')" id="emoji4">😄</span>
+                    <span onclick="selectMood('😡')" id="emoji5">😡</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Tasks Section -->
+        <section class="section-box daily-tasks">
+            <h3>Daily Tasks</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Morning Meditation</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Gratitude Journal</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">Evening Reflection</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task4">
+                    <label for="task4">Breathing Exercise</label>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="section-box upcoming-events">
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li>Group Meditation Session - Tomorrow, 7 PM</li>
+                <li>Therapy Session - Thursday, 2 PM</li>
+                <li>Support Group Meeting - Friday, 6 PM</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        let streak = 0;
+        let moodSelectedToday = false;
+
+        function selectMood(emoji) {
+            if (moodSelectedToday) {
+                alert("You can only select one mood per day.");
+                return;
+            }
+
+            // Set the current mood emoji
+            document.getElementById("current-mood").innerText = emoji;
+
+            // Increment the streak if it's the first selection of the day
+            streak += 1;
+            document.getElementById("streak").innerText = streak;
+
+            // Disable all emoji buttons after selection
+            document.getElementById("emoji1").style.pointerEvents = "none";
+            document.getElementById("emoji2").style.pointerEvents = "none";
+            document.getElementById("emoji3").style.pointerEvents = "none";
+            document.getElementById("emoji4").style.pointerEvents = "none";
+            document.getElementById("emoji5").style.pointerEvents = "none";
+
+            moodSelectedToday = true;
+        }
+    </script>
+</body>
+</html>

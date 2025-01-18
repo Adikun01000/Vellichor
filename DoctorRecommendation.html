@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors Directory</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .doctor-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      margin: 15px 0;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .doctor-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .doctor-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .doctor-details {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .doctor-details h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #34495e;
+    }
+
+    .doctor-details p {
+      margin: 5px 0;
+      color: #7f8c8d;
+    }
+
+    .actions {
+      text-align: right;
+    }
+
+    .actions a {
+      display: inline-block;
+      margin: 5px 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .actions .video-btn {
+      background-color: #3498db;
+    }
+
+    .actions .video-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .actions .chat-btn {
+      background-color: #27ae60;
+    }
+
+    .actions .chat-btn:hover {
+      background-color: #1e8449;
+    }
+
+    .actions .map-btn {
+      background-color: #f1c40f;
+    }
+
+    .actions .map-btn:hover {
+      background-color: #d4ac0d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Find Your Specialist</h1>
+      <p>Top doctors to help you manage stress and tension effectively</p>
+    </div>
+
+    <!-- Doctor 1 -->
+    <div class="doctor-card">
+      
+      <div class="doctor-details">
+        <h3>Dr. Maya Kapoor</h3>
+        <p>Specialization: Stress Management Specialist</p>
+        <p>Contact: +91 9123456780</p>
+        
+      </div>
+      <div class="actions">
+        <a href="https://zoom.us/j/123456789" target="_blank" class="video-btn">Video Call</a>
+        <a href="https://wa.me/919123456780" target="_blank" class="chat-btn">Chat</a>
+        <a href="https://www.google.com/maps?q=Delhi" target="_blank" class="map-btn">Location</a>
+      </div>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card">
+      
+      <div class="doctor-details">
+        <h3>Dr. Rahul Mehta</h3>
+        <p>Specialization: Tension Relief Therapist</p>
+        <p>Contact: +91 9876543211</p>
+     
+      </div>
+      <div class="actions">
+        <a href="https://zoom.us/j/987654321" target="_blank" class="video-btn">Video Call</a>
+        <a href="https://wa.me/919876543211" target="_blank" class="chat-btn">Chat</a>
+        <a href="https://www.google.com/maps?q=Mumbai" target="_blank" class="map-btn">Location</a>
+      </div>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card">
+    
+      <div class="doctor-details">
+        <h3>Dr. Anjali Sen</h3>
+        <p>Specialization: Anxiety & Depression Expert</p>
+        <p>Contact: +91 9987654322</p>
+      
+      </div>
+      <div class="actions">
+        <a href="https://zoom.us/j/998765432" target="_blank" class="video-btn">Video Call</a>
+        <a href="https://wa.me/919987654322" target="_blank" class="chat-btn">Chat</a>
+        <a href="https://www.google.com/maps?q=Bangalore" target="_blank" class="map-btn">Location</a>
+      </div>
+    </div>
+
+    <!-- Doctor 4 -->
+    <div class="doctor-card">
+     
+      <div class="doctor-details">
+
+
+
+
+
+
+
+
+
+
+        
+        <h3>Dr. Priya Iyer</h3>
+        <p>Specialization: Psychologist & Wellness Coach</p>
+        <p>Contact: +91 9876543222</p>
+       
+      </div>
+      <div class="actions">
+        <a href="https://zoom.us/j/112233445" target="_blank" class="video-btn">Video Call</a>
+        <a href="https://wa.me/919876543222" target="_blank" class="chat-btn">Chat</a>
+        <a href="https://www.google.com/maps?q=Chennai" target="_blank" class="map-btn">Location</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="home page.html">
+        <button class="link-button">Back to home Page</button>
+    </a>
+  </footer>
+</body>
+</html>
